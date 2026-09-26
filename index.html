@@ -3,12 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Andreas Wik</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f7f7f5;
+      color: #181818;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8vw;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 5.5rem);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+
+    p {
+      margin: 1.2rem 0 0;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      color: #686866;
+      letter-spacing: -0.01em;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 1px;
+      height: 1em;
+      margin-left: 5px;
+      background: currentColor;
+      vertical-align: -0.12em;
+      animation: blink 1.1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 45% {
+        opacity: 1;
+      }
+
+      46%, 100% {
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <main>
     <h1>Andreas Wik</h1>
-    <p>It is what it is. But something new is taking shape, that's for damn sure.</p>
+
+    <p>
+      Things in the making.<span class="cursor"></span>
+    </p>
   </main>
 </body>
 </html>
