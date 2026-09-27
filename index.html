@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Andreas Wik</title>
 
-  <style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKSW2SPXLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'G-JKSW2SPXLS');
+  </script>
+
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
+
     * {
       box-sizing: border-box;
     }
 
     html,
-body {
-  background: #f3f1ec;
-  color: #171715;
-  font-family: "Manrope", sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+    body {
+      background: #f3f1ec;
+      color: #171715;
+      font-family: "Manrope", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
 
     main {
       min-height: 100vh;
@@ -29,95 +40,99 @@ body {
       padding: 8vw;
     }
 
-h1 {
-  margin: 0;
-  font-size: clamp(2.8rem, 6vw, 5.8rem);
-  font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 0.95;
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 5.8rem);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      line-height: 0.95;
 
-  opacity: 0;
-  transform: translateY(6px);
-  animation: intro 0.6s ease-out forwards;
-}
+      opacity: 0;
+      transform: translateY(6px);
+      animation: intro 0.6s ease-out forwards;
+    }
 
-p {
-  margin: 2rem 0 0;
-  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
-  font-weight: 400;
-  color: #77746d;
-  letter-spacing: -0.015em;
-}
+    p {
+      margin: 2rem 0 0;
+      font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+      font-weight: 400;
+      color: #77746d;
+      letter-spacing: -0.015em;
+    }
 
-.cursor {
-  display: inline-block;
-  width: 1px;
-  height: 1em;
-  margin-left: 5px;
-  background: #315efb;
-  vertical-align: -0.12em;
-  animation: blink 1.1s steps(1) infinite;
-}
+    .cursor {
+      display: inline-block;
+      width: 1px;
+      height: 1em;
+      margin-left: 5px;
+      background: #315efb;
+      vertical-align: -0.12em;
+      animation: blink 1.1s steps(1) infinite;
+    }
 
     @keyframes blink {
-      0%, 45% {
+
+      0%,
+      45% {
         opacity: 1;
       }
 
-      46%, 100% {
+      46%,
+      100% {
         opacity: 0;
       }
     }
 
     h1 {
-  opacity: 0;
-  transform: translateY(6px);
-  animation: intro 0.6s ease-out forwards;
-}
+      opacity: 0;
+      transform: translateY(6px);
+      animation: intro 0.6s ease-out forwards;
+    }
 
-.tagline {
-  min-height: 1.5em;
-}
+    .tagline {
+      min-height: 1.5em;
+    }
 
-@keyframes intro {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes intro {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 
 <body>
   <main>
-<h1>
-  Andreas Wik
-</h1>
+    <h1>
+      Andreas Wik
+    </h1>
     <p class="tagline">
-  <span id="tagline-text"></span><span class="cursor"></span>
-</p>
+      <span id="tagline-text"></span><span class="cursor"></span>
+    </p>
   </main>
 
-<script>
-  const text = "Things in the making.";
-  const element = document.getElementById("tagline-text");
+  <script>
+    const text = "Things in the making.";
+    const element = document.getElementById("tagline-text");
 
-  const startDelay = 550;
-  const typingSpeed = 38;
+    const startDelay = 550;
+    const typingSpeed = 38;
 
-  setTimeout(() => {
-    let i = 0;
+    setTimeout(() => {
+      let i = 0;
 
-    const type = () => {
-      if (i < text.length) {
-        element.textContent += text[i];
-        i++;
-        setTimeout(type, typingSpeed);
-      }
-    };
+      const type = () => {
+        if (i < text.length) {
+          element.textContent += text[i];
+          i++;
+          setTimeout(type, typingSpeed);
+        }
+      };
 
-    type();
-  }, startDelay);
-</script>
+      type();
+    }, startDelay);
+  </script>
 </body>
+
 </html>
